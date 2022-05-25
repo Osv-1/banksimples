@@ -1,14 +1,26 @@
 package com.br.bank.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.util.List;
 
-@Entity
 public class Banco {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long idBanco;
+
     private String nome;
+    private List<Conta> contas;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public List<Conta> getContas() {
+        return contas;
+    }
+
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
+    }
+
 }
